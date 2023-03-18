@@ -11,7 +11,10 @@ require('./routes/htmlRoutes')(app);
 
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
+// COMPLETED
 // has client server folder structure
+
+// TO COMPLETE
 // `npm run start` in the root starts up the backend and serve the client
 // When running the app, the JavaScript files can be seen as bundled using webpack
 // Running webpack plugins generates an HTML file, service worker, and a manifest file
