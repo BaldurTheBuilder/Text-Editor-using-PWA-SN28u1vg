@@ -16,7 +16,7 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 // `npm run start` in the root starts up the backend and serve the client
 // When running the app, the JavaScript files can be seen as bundled using webpack
 // Running webpack plugins generates an HTML file, service worker, and a manifest file.
-// app has a service worker using workbox
+
 
 
 // IN PROGRESS
@@ -27,6 +27,7 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
 
 // TO DO
+// app has a service worker using workbox
 // WHEN I register a service worker I should have my static assets pre cached upon loading along with subsequent pages and static assets
 // hard reloads on the app retrieve content from IndexedDB
 // the Install button downloads the app as an icon on desktop

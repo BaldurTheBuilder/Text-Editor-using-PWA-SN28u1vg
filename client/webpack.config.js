@@ -4,8 +4,6 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add babel to webpack.
-
 module.exports = () => {
   return {
     mode: 'development',
@@ -22,7 +20,15 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
-
+      // new WorkboxPlugin.GenerateSW({
+      //   // runtimeCaching: [{
+      //   //   urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+      //   //   handler: 'CacheFirst',
+      //   //   options: {
+      //   //     cacheName: 'images',
+      //   //   },
+      //   // }],
+      // }),
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'service-worker.js'
