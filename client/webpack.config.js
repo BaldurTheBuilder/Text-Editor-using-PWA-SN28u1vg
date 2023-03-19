@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
@@ -22,6 +23,7 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+      new WorkboxPlugin.GenerateSW()
     ],
 
     module: {
