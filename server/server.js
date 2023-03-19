@@ -16,10 +16,10 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
 // IN PROGRESS
 // `npm run start` in the root starts up the backend and serve the client
+// When running the app, the JavaScript files can be seen as bundled using webpack
 
 // TO DO
-// When running the app, the JavaScript files can be seen as bundled using webpack
-// Running webpack plugins generates an HTML file, service worker, and a manifest file
+// Running webpack plugins generates an HTML file, service worker, and a manifest file. Does NOT generate a separate CSS file.
 // App functions with next-gen Javascript
 // IndexedDB creates a db storage when opening the app
 // app content is saved with IndexedDB when submitted and clicking off the DOM window
