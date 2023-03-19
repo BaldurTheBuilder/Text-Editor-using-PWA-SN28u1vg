@@ -15,12 +15,12 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 // has client server folder structure
 // `npm run start` in the root starts up the backend and serve the client
 // When running the app, the JavaScript files can be seen as bundled using webpack
+// Running webpack plugins generates an HTML file, service worker, and a manifest file.
+// app has a service worker using workbox
 
 
 // IN PROGRESS
-// Running webpack plugins generates an HTML file, service worker, and a manifest file.
 // WHEN I register a service worker I should have my static assets pre cached upon loading along with subsequent pages and static assets
-// app has a service worker using workbox
 // Technical Criteria
     // Create a service worker with workbox that Caches static assets
 
