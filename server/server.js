@@ -20,18 +20,19 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
 
 // IN PROGRESS
-// WHEN I register a service worker I should have my static assets pre cached upon loading along with subsequent pages and static assets
-// Technical Criteria
-    // Create a service worker with workbox that Caches static assets
-
-// TO DO
 // App functions with next-gen Javascript
 // IndexedDB creates a db storage when opening the app
 // app content is saved with IndexedDB when submitted and clicking off the DOM window
+// Technical Criteria
+
+
+// TO DO
+// WHEN I register a service worker I should have my static assets pre cached upon loading along with subsequent pages and static assets
 // hard reloads on the app retrieve content from IndexedDB
 // the Install button downloads the app as an icon on desktop
 // deployed to Heroku with proper build scripts for a webpack application
 // Technical Criteria
+    // Create a service worker with workbox that Caches static assets
     // Uses IndexedDB to create an object store and includes both GET and PUT methods
     // The application works without an internet connection
     // Automatically saves content inside the text editor when the DOM window is unfocused
