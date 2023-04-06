@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
-const { InjectManifest } = require('workbox-webpack-plugin');
+const { InjectManifest, GenerateSW } = require('workbox-webpack-plugin');
 
+
+// WHEN I run my webpack plugins I find that I have a generated HTML file, service worker, and a manifest file
 module.exports = () => {
   return {
     mode: 'development',
@@ -20,18 +21,10 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
-      // new WorkboxPlugin.GenerateSW({
-      //   // runtimeCaching: [{
-      //   //   urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-      //   //   handler: 'CacheFirst',
-      //   //   options: {
-      //   //     cacheName: 'images',
-      //   //   },
-      //   // }],
-      // }),
+      new GenerateSW(),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js'
+        swDest: 'src-sw.js'
       }),
 
       new WebpackPwaManifest({
