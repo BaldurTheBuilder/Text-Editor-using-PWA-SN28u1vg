@@ -3,6 +3,8 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest, GenerateSW } = require('workbox-webpack-plugin');
 
+
+// WHEN I run my webpack plugins I find that I have a generated HTML file, service worker, and a manifest file
 module.exports = () => {
   return {
     mode: 'development',
