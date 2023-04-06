@@ -14,30 +14,17 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
 
 
-// IN PROGRESS
-// App functions with next-gen Javascript
-// IndexedDB creates a db storage when opening the app
-// app content is saved with IndexedDB when submitted and clicking off the DOM window
-// Technical Criteria
-
-
-// TO DO
-// app has a service worker using workbox
+// WHEN I run `npm run start` from the root directory I find that my application should start up the backend and serve the client
+// WHEN I run the text editor application from my terminal I find that my JavaScript files have been bundled using webpack
+// WHEN I run my webpack plugins I find that I have a generated HTML file, service worker, and a manifest file
+// WHEN I use next-gen JavaScript in my application I find that the text editor still functions in the browser without errors
+// WHEN I open the text editor I find that IndexedDB has immediately created a database storage
+// WHEN I enter content and subsequently click off of the DOM window I find that the content in the text editor has been saved with IndexedDB
+// WHEN I reopen the text editor after closing it I find that the content in the text editor has been retrieved from our IndexedDB
+// WHEN I click on the Install button I download my web application as an icon on my desktop
+// WHEN I load my web application I should have a registered service worker using workbox
 // WHEN I register a service worker I should have my static assets pre cached upon loading along with subsequent pages and static assets
-// hard reloads on the app retrieve content from IndexedDB
-// the Install button downloads the app as an icon on desktop
-// deployed to Heroku with proper build scripts for a webpack application
-// Technical Criteria
-    // Create a service worker with workbox that Caches static assets
-    // Uses IndexedDB to create an object store and includes both GET and PUT methods
-    // The application works without an internet connection
-    // Automatically saves content inside the text editor when the DOM window is unfocused
-    // Bundled with webpack
-    // The application should use babel in order to use async / await
-    // Application must have a generated manifest.json using the WebpackPwaManifest plug-in
-    // Can be installed as a Progressive Web Application
-    // Deployed to Heroku
-
+// WHEN I deploy to Heroku I should have proper build scripts for a webpack application
 
 // However, a couple of missing components in your SW.JS.
 // The webpack.config.js files are getting in the way of some of the functionality we are expecting to see. 
