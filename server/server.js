@@ -11,11 +11,6 @@ require('./routes/htmlRoutes')(app);
 
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
 
-// COMPLETED
-// has client server folder structure
-// `npm run start` in the root starts up the backend and serve the client
-// When running the app, the JavaScript files can be seen as bundled using webpack
-// Running webpack plugins generates an HTML file, service worker, and a manifest file.
 
 
 
@@ -42,3 +37,11 @@ app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
     // Application must have a generated manifest.json using the WebpackPwaManifest plug-in
     // Can be installed as a Progressive Web Application
     // Deployed to Heroku
+
+
+// However, a couple of missing components in your SW.JS.
+// The webpack.config.js files are getting in the way of some of the functionality we are expecting to see. 
+// You are missing the code for the asset caching functionality after line 29 of your src-sw.js file, remember, you 
+//   should be importing the StaleWhileRevalidate object at the top of your file to be available for use. 
+// Lastly, make sure to complete putDb and getDb functions used to add and retrieve data to and from your database(js/database.js).
+// look at the module and the mini project.
