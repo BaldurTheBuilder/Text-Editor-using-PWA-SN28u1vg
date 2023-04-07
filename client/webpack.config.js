@@ -28,10 +28,10 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-        filename: 'thisManifest.json',
+        // filename: 'thisManifest.json',
         name: 'text editor',
         short_name: 'MyText',
-        fingerprints: true,
+        fingerprints: false,
         inject: true,
         start_url: './',
         publicPath: './',
